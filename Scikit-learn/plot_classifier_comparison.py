@@ -26,6 +26,8 @@ set.
 
 import matplotlib.pyplot as plt
 import numpy as np
+import pandas as pd
+
 from matplotlib.colors import ListedColormap
 
 from sklearn.datasets import make_circles, make_classification, make_moons
@@ -74,6 +76,14 @@ classifiers = [
 X, y = make_classification(
     n_features=2, n_redundant=0, n_informative=2, random_state=1, n_clusters_per_class=1
 )
+
+X_df = pd.DataFrame(X, columns=['Feature1', 'Feature2'])
+X_df['Label'] = y
+print("DataFrame de características X:")
+print(X_df)
+
+
+
 rng = np.random.RandomState(2)
 X += 2 * rng.uniform(size=X.shape)
 linearly_separable = (X, y)
