@@ -6,8 +6,6 @@ iris = load_iris()
 X = iris.data
 y = iris.target
 
-print(y)
-
 # Utilizar solo la primera característica para simplificar el ejemplo
 X_simple = X[:, 0].reshape(-1, 1)
 
