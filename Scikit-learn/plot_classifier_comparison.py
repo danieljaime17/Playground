@@ -77,12 +77,10 @@ X, y = make_classification(
     n_features=2, n_redundant=0, n_informative=2, random_state=1, n_clusters_per_class=1
 )
 
-X_df = pd.DataFrame(X, columns=['Feature1', 'Feature2'])
-X_df['Label'] = y
-print("DataFrame de características X:")
-print(X_df)
-
-
+#X_df = pd.DataFrame(X, columns=['Feature1', 'Feature2'])
+#X_df['Label'] = y
+#print("DataFrame de características X:")
+#print(X_df)
 
 rng = np.random.RandomState(2)
 X += 2 * rng.uniform(size=X.shape)
@@ -93,7 +91,7 @@ datasets = [
     make_circles(noise=0.2, factor=0.5, random_state=1),
     linearly_separable,
 ]
-
+print(datasets[0])
 figure = plt.figure(figsize=(27, 9))
 i = 1
 # iterate over datasets
